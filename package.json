@@ -1,0 +1,28 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A compatibility-based \"FriendFinder\" application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keenwilson/FriendFinder.git"
+  },
+  "keywords": [
+    "dating",
+    "app"
+  ],
+  "author": "Keen Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keenwilson/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/keenwilson/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
