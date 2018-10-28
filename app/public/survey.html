@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FriendFinder | Survey</title>
+    <!-- Link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Vollkorn" rel="stylesheet">
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <!-- Link Bootstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Link Customized CSS -->
+    <link href="./style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!-- jumbotron -->
+    <div class="jumbotron text-center hoverable p-4">
+        <!-- Grid row -->
+        <div class="row">
+            <div class="container">
+
+                <h1 class="display-4"><i class="fas fa-user-friends"></i> Survey Questions</h1>
+                <hr class="my-4">
+            </div>
+            <!-- End Grid Row -->
+        </div>
+        <!-- End Container -->
+    </div>
+    <!-- jumbotron -->
+    <!-- Body -->
+    <div class="container">
+        <div class="jumbotron">
+            <!-- Grid Row -->
+            <div class="row">
+                <div class="col-12 ">
+                    <p class="lead">About You</p>
+                    <form role="form" class="px-4 py-3" action="http://localhost:8080/friends" method="POST">
+                        <!-- Form Row -->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="control-label" for="inputEmail4">Name (Required)</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Your Name Here">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="control-label" for="inputPassword4">Link to Photo Image (Required)</label>
+                                <input type="texr" class="form-control" id="inputArtist" placeholder="http://yourImageURLhere.com">
+                            </div>
+                        </div>
+                        <!-- Form Row -->
+                        <!-- Question 1 -->
+                        <!-- Form Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="control-label" for="question1">Question 1</label>
+                                <p class="lead">Your mind is always buzzing with unexplored ideas and plans.</p>
+                                <div class="col-sm-4 mb-3">
+                                    <select class="form-control" id="question1">
+                                        <option>1 (Strongly Disagree)</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5 (Strongly Agree)</option>
+                                    </select>
+                                </div> <!-- Column -->
+                            </div>
+                        </div>
+                        <!-- Form Row -->
+                        <!-- Question 1 -->
+                        <div class="row">
+                            <div class="col-12 mx-4 my-3">
+                                <button type="submit" class="btn btn-info">Submit</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+            </div>
+            <!-- End Grid Row -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
