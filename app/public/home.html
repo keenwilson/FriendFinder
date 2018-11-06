@@ -22,37 +22,41 @@
 
 <body>
 
-    <div class="container">
-        <!-- jumbotron -->
-        <div class="jumbotron text-center hoverable p-4">
+    <div id="home" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <!-- jumbotron -->
+            <div class="my-header jumbotron text-center hoverable p-4">
 
-            <h1 class="display-4"><i class="fas fa-user-friends"></i> Friend Finder</h1>
-            <hr class="my-4">
-            <p class="lead">Answer a few basic questions</p>
-            <p>Then find the friend with the greatest compatibility!</p>
-            <div class="text-center my-5">
+                <h1 class="display-4"><i class="fas fa-child"></i><i class="fas fa-child"></i> Playdate Friend Finder</h1>
+                <hr class="my-4">
+                <p class="lead">Answer a few basic questions</p>
+                <p>Then find the friend with the greatest compatibility!</p>
+                <div class="text-center my-5">
 
-                <a href="/friends">
-                    <button class="btn btn-lg btn-info">
-                            <i class="fas fa-user-friends"></i> View Friends
-                    </button>
-                  </a>
-    
-                  <a href="/survey">
-                    <button class="btn btn-lg btn-info">
+                    <a href="/survey">
+                        <button class="btn btn-lg btn-secondary">
                             <i class="fas fa-poll-h"></i> Go to Survey
-                    </button>
-                  </a>
-            </div>
+                        </button>
+                    </a>
+                </div>
 
+            </div>
+            <!-- jumbotron -->
         </div>
-        <!-- jumbotron -->
+    </div>
+    <div class="container">
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <p><a href="/api/friends">API Friend Link</a> 
+    <!-- Footer -->
+    <footer class="footer my-4">
+            <hr>
+            <div class="text-center center-block">
+                <p><a href="/"><span class="fa fa-home"></span></a> | <a href="/api/friends">API Friends Link</a> | <a href="https://github.com/keenwilson/FriendFinder"
+                        target="_blank">GitHub Repo</a></p>
+    
+                       
+    
             </div>
+            <hr>
         </footer>
         <!-- Footer -->
     </div>
