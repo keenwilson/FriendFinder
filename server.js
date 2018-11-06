@@ -24,12 +24,6 @@ app.use(bodyParser.json());
 
 app.use(express.static("app/public"));
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
 // ================================================================================
 // ROUTER
 // The below points our server to a series of "route" files.
@@ -41,7 +35,7 @@ require("./app/routing/htmlRoutes")(app);
 
 // =============================================================================
 // LISTENER
-// The below code effectively "starts" our server
+// The below code effectively "starts" our server to begin listening
 // =============================================================================
 
 app.listen(PORT, function() {

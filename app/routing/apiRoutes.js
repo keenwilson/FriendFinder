@@ -32,46 +32,53 @@ module.exports = function (app) {
   // Then the server saves the data to the friends array)
   // ---------------------------------------------------------------------------
 
-  app.post("/api/friends", function (req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know the matching friend.
-    // It will do this by sending the name of the matched friend.
-    // req.body is available since we're using the body parsing middleware
-    const id = Math.floor(Math.random() * 100000);
-    const userID = req.body.userName.replace(/\s+/g, "") + `-${id}`;
 
-    var newFriend = req.body;
-    var lowestScore = 100;
+  // Add new friend entry
+	app.post('/api/friends', function(req, res) {
+		// Capture the newFriend object
+		var newFriend = req.body;
+		console.log('newFriend = ' + JSON.stringify(newFriend));
 
-    function add(a, b) {
-      return parseInt(a) + parseInt(b);
-    }
+		var newFriendResponses = newFriend.scores;
+		console.log('newFriendResponses = ' + newFriendResponses);
 
-    var newFriendScore = newFriend.scores.reduce(add, 0);
+		// Compute best friend match
+		var matchName = '';
+		var matchImage = '';
+		var totalDifference = 10000; // Make the initial value big for comparison
 
-    for (var i = 0; i < friends.length; i++) {
-      var friendScore = friends[i].scores.reduce(add, 0);
+		// Examine all existing friends in the list
+		for (var i = 0; i < friends.length; i++) {
+			console.log('friend = ' + JSON.stringify(friends[i]));
 
-      var scoreDiff = Math.abs(friendScore - newFriendScore);
-      if (scoreDiff < lowestScore && newFriend.name !== friends[i].name) {
-        lowestScore = scoreDiff;
-        newFriend.winningFriend = friends[i];
-      }
-    }
-    console.log(
-      newFriend.name +
-      "'s " +
-      "friend match is : " +
-      newFriend.winningFriend.name
-    );
+			// Compute differenes for each question
+			var diff = 0;
+			for (var j = 0; j < newFriendResponses.length; j++) {
+				diff += Math.abs(friends[i].scores[j] - newFriendResponses[j]);
+			}
+			console.log('diff = ' + diff);
 
-    newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
+			// If lowest difference, record the friend match
+			if (diff < totalDifference) {
+			console.log('Closest match found = ' + diff);
+			console.log('Friend name = ' + friends[i].name);
+			console.log('Friend image = ' + friends[i].photo);
 
-    console.log("Newly added friend: " + newFriend.name);
+				totalDifference = diff;
+				matchName = friends[i].name;
+				matchImage = friends[i].photo;
+			}
+		}
 
-    friends.push(newFriend);
+		// Add new user
+		friends.push(newFriend);
 
-    res.json(newFriend);
+		// Send appropriate response
+		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
   });
+  
+
+  
 
 
 
