@@ -20,84 +20,374 @@
 </head>
 
 <body>
-    <!-- jumbotron -->
-    <div class="jumbotron text-center hoverable p-4">
-        <!-- Grid row -->
-        <div class="row">
-            <div class="container">
 
-                <h1 class="display-4"><i class="fas fa-user-friends"></i> Survey Questions</h1>
-                <hr class="my-4">
-            </div>
-            <!-- End Grid Row -->
-        </div>
-        <!-- End Container -->
-    </div>
-    <!-- jumbotron -->
-    <!-- Body -->
     <div class="container">
-        <div class="jumbotron">
-            <!-- Grid Row -->
-            <div class="row">
-                <div class="col-12 ">
-                    <p class="lead">About You</p>
-                    <form role="form" class="px-4 py-3" action="http://localhost:8080/friends" method="POST">
-                        <!-- Form Row -->
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label class="control-label" for="inputEmail4">Name (Required)</label>
-                                <input type="text" class="form-control" id="inputName" placeholder="Your Name Here">
+        <!-- jumbotron -->
+        <div class="jumbotron text-center hoverable p-4">
+
+            <h1 class="display-4"><i class="fas fa-child"></i><i class="fas fa-child"></i> Playdate Friend Finder</h1>
+            <hr class="my-4">
+            <p class="lead"> <i class="fas fa-poll-h"></i> Survey Question</p>
+            <p>Answer a few basic questions then find the mom friend with the matching parenting style!</p>
+            <div class="text-center my-5">
+                <a href="/friends">
+                    <button class="btn btn-lg btn-info">
+                        <i class="fas fa-user-friends"></i> View Friends</button>
+                </a>
+
+                <a href="/">
+                    <button class="btn btn-lg btn-default">
+                        <span class="fa fa-home"></span>
+                    </button>
+                </a>
+            </div>
+
+        </div>
+        <!-- jumbotron -->
+
+        <!-- Survey Page -->
+        <div class="row">
+            <div class="col-lg-12">
+
+
+                <div class="card">
+                    <div class="card-header">
+                        About You
+                    </div>
+
+                    <div class="card-body">
+                        <form role="form" class="px-4 py-3" method="POST">
+                            <!-- Form Row -->
+                            <div class="form-row align-items-center">
+                                <div class="form-group col-md-6">
+                                    <label class="control-label" for="user-name">Name (Required)</label>
+                                    <input type="text" class="form-control" id="user-name" placeholder="Your Name Here">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="control-label" for="user-photo">Link to Photo Image (Required)</label>
+                                    <input type="texr" class="form-control" id="user-photo" placeholder="http://yourImageURLhere.com">
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label class="control-label" for="inputPassword4">Link to Photo Image (Required)</label>
-                                <input type="texr" class="form-control" id="inputArtist" placeholder="http://yourImageURLhere.com">
-                            </div>
-                        </div>
-                        <!-- Form Row -->
-                        <!-- Question 1 -->
-                        <!-- Form Row -->
-                        <div class="form-row">
+                            <!-- Form Row -->
+                            <!-- Question 1 -->
                             <div class="form-group">
-                                <label class="control-label" for="question1">Question 1</label>
-                                <p class="lead">Your mind is always buzzing with unexplored ideas and plans.</p>
-                                <div class="col-sm-4 mb-3">
-                                    <select class="form-control" id="question1">
-                                        <option>1 (Strongly Disagree)</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5 (Strongly Agree)</option>
-                                    </select>
-                                </div> <!-- Column -->
+                                <label class="control-label" for="q1">
+                                    <h3>Question 1 </h3><br>
+                                    <p>Parents should provide direction but also listen and discuss their kids’
+                                        concerns.</p>
+                                </label>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q1">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Form Row -->
-                        <!-- Question 1 -->
-                        <div class="row">
-                            <div class="col-12 mx-4 my-3">
-                                <button type="submit" class="btn btn-info">Submit</button>
+                            <!-- Question 1 -->
+
+                            <!-- Question 2 -->
+                            <div class="form-group">
+                                <label class="control-label" for="q2">
+                                    <h3>Question 2 </h3><br>
+                                    <p>Society would be better if parents were more strict with their kids.</p>
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q2">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <!-- Question 2 -->
+
+                            <!-- Question 3 -->
+                            <div class="form-group">
+                                <label class="control-label" for="q3">
+                                    <h3>Question 3 </h3><br>
+                                    <p>Kids should make most of their own decisions without parental direction.</p>
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q3">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 3 -->
+
+                            <!-- Question 4 -->
+                            <div class="form-group">
+                                <label class="control-label" for="q4">
+                                    <h3>Question 4 </h3><br>
+                                    <p>There shouldn’t be rigid rules for kids’ behavior.</p>
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q4">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 4 -->
+
+                            <!-- Question 5 -->
+                            <div class="form-group">
+                                <label class="control-label" for="q5">
+                                    <h3>Question 5 </h3><br>
+                                    <p>Children should follow their parents’ orders without asking questions.</p>
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q5">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 5 -->
+
+                            <!-- Question 6 -->
+                            <div class="form-group">
+                                <label class="control-label" for="q6">
+                                    <h3>Question 6 </h3><br>
+                                    <p>Children should be told exactly what to do and how to do it.</p>
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q6">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 6 -->
+                            <!-- Question 7 -->
+                            <div class="form-group">
+                                <label class="control-label" for="q7">
+                                    <h3>Question 7</h3><br>
+                                    <p>Kids can make up their own minds and do what they want to do.</p>
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q7">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 7 -->
+                            <!-- Question 8 -->
+                            <div class="form-group">
+                                <label class="control-label" for="q8">
+                                    <h3>Question 8</h3><br>
+                                    <p>Kids need to learn early who the boss is in the family.</p>
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q8">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 8 -->
+                            <!-- Question 9 -->
+                            <div class="form-group">
+                                <label class="control-label" for="q9">
+                                    <h3>Question 9</h3><br>
+                                    <p>Parents should discuss the reasons behind their policies with their kids.</p>
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q9">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 9 -->
+                            <!-- Question 10 -->
+                            <div class="form-group">
+                                <label class="control-label" for="q10">
+                                    <h3>Question 10</h3><br>
+                                    <p>Parents should make their expectations of their children very clear and open to
+                                        discussion</p>
+                                </label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <select class="form-control" id="q10">
+                                            <option selected>Choose...</option>
+                                            <option>1 (Strongly Disagree)</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 10 -->
 
 
-                    </form>
 
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-info submit" data-toggle="modal" data-target="#friendModal">Submit</button>
+
+
+
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- Survey Page -->
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">API Friend Link</a>
+            </div>
+        </footer>
+        <!-- Footer -->
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="friendModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="friendModalLabel">Congratulations!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="friendPicture" src="" height="200" width="200">
+                    <span id="message"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
-            <!-- End Grid Row -->
         </div>
     </div>
-
-
-
-
 
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+    <script type="text/javascript">
+        $(".submit").on("click", function (event) {
+            event.preventDefault();
+
+            // Here we grab the form elements
+            var newFriend = {
+                name: $("#user-name").val().trim(),
+                photo: $("#user-photo").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ],
+
+            }
+            console.log("newFriend", newFriend);
+            // This line is the magic. It"s very similar to the standard ajax function we used.
+            // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+            // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+            // depending on if a tables is available or not.
+
+            $.post("/api/friends", newFriend).then(function (data) {
+
+                console.log("data", data);
+
+                $("#friendPicture").attr("src", data.winningFriend.photo);
+                $("#message").text("You're match is " + data.winningFriend.name)
+
+                // Clear the form when submitting
+                $("#user-name").val("");
+                $("#user-photo").val("");
+                $("#q1").val("");
+                $("#q2").val("");
+                $("#q3").val("");
+                $("#q4").val("");
+                $("#q5").val("");
+                $("#q6").val("");
+                $("#q7").val("");
+                $("#q8").val("");
+                $("#q9").val("");
+                $("#q10").val("");
+
+            });
+        });
+
+
+
+    </script>
 </body>
 
 </html>

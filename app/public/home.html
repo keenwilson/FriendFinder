@@ -14,46 +14,52 @@
     <!-- Link Bootstrap Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Link Customized CSS -->
     <link href="./style.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
-    <!-- jumbotron -->
-    <div class="jumbotron text-center hoverable p-4">
 
-        <!-- Grid row -->
-        <div class="row">
-            <div class="container">
-                <div class="jumbotron">
-                    <h1 class="display-4"><i class="fas fa-user-friends"></i> Friend Finder</h1>
-                    <hr class="my-4">
-                    <p class="lead">Answer a few basic questions</p>
-                    <p>Then find the friend with the greatest compatibility!</p>
-                    <a class="btn btn-info btn-lg " href="#" role="button">Go to Survey</a>
-                    <!-- Featured image -->
-                    <div class="view overlay">
-                        <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid" alt="Sample image for first version of blog listing">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                </div>
+    <div class="container">
+        <!-- jumbotron -->
+        <div class="jumbotron text-center hoverable p-4">
 
-            </div> <!-- End Container -->
+            <h1 class="display-4"><i class="fas fa-user-friends"></i> Friend Finder</h1>
+            <hr class="my-4">
+            <p class="lead">Answer a few basic questions</p>
+            <p>Then find the friend with the greatest compatibility!</p>
+            <div class="text-center my-5">
 
+                <a href="/friends">
+                    <button class="btn btn-lg btn-info">
+                            <i class="fas fa-user-friends"></i> View Friends
+                    </button>
+                  </a>
+    
+                  <a href="/survey">
+                    <button class="btn btn-lg btn-info">
+                            <i class="fas fa-poll-h"></i> Go to Survey
+                    </button>
+                  </a>
+            </div>
 
         </div>
-        <!-- Grid row -->
+        <!-- jumbotron -->
 
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">API Friend Link</a> 
+            </div>
+        </footer>
+        <!-- Footer -->
     </div>
-    <!-- jumbotron -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

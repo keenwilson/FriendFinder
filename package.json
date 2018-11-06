@@ -22,7 +22,12 @@
   },
   "homepage": "https://github.com/keenwilson/FriendFinder#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "vue": "^2.5.17"
   }
 }
