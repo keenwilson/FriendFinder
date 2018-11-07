@@ -34,6 +34,11 @@ The front-end will be composed of a basic survey.
 ## Code Blocks
 
 ```
+var PORT = process.env.PORT || 3000;
+```
+* The `process.env.PORT` will be populated by Heroku later when the application is deployed and because we use the `||` to indicate "OR" the code will fallback to `8080` locally when it sees that `process.env.PORT` is not populated locally.
+
+```
 app.get("/api/friends", function (req, res) {
 // Show a JSON of the data in friends.js
 res.json(friends);
