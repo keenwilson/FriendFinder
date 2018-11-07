@@ -12,11 +12,11 @@ A full-stack compatibility-based  _Playdate Friend Finder_ application (basicall
     * `Express` makes routing easy for us, and we set a variable `App` equal to the function `Express` so we can easily call it.
     * `body-parser` allows us to receive information back in JSON format so it is easy to manipulate.
     * `path` provides utilities for working with file and directory paths. It’s not a npm package. In fact, `path` is built into `Node` itself, but you have to install it. 
-* `AJAX` allows us to  grab the data from the API-routes and push changes on the client front-end side.
-* `jQuery` is used to display data in HTML back to the user.
+* `jQuery`'s `AJAX` methods is used to grab the data from the API-routes, push changes on the client front-end side,  and display data in HTML back to the user.
 * `RegEx` 
 * `Git`
 * `Heroku`
+* `Postman` 
 
 ---
 ## How this App Works
@@ -36,7 +36,7 @@ The front-end will be composed of a basic survey.
 ```
 var PORT = process.env.PORT || 3000;
 ```
-* The `process.env.PORT` will be populated by Heroku later when the application is deployed and because we use the `||` to indicate "OR" the code will fallback to `8080` locally when it sees that `process.env.PORT` is not populated locally.
+* The `process.env.PORT` will be populated by Heroku later when the application is deployed and because we use the `||` to indicate "OR" the code will fallback to `3000` locally when it sees that `process.env.PORT` is not populated locally.
 
 ```
 app.get("/api/friends", function (req, res) {
