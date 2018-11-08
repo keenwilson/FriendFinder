@@ -3,7 +3,7 @@
 A full-stack compatibility-based  _Playdate Friend Finder_ application (basically a dating app for mommy friends) implemented `Express` to handle routing that makes that data and logic accessible, and deployed to `Heroku` so other users can use it.
 
 ---
-[Live Demo](https://guarded-fortress-95261.herokuapp.com  "Playdate Friend Finder")
+A working version of the application can be found at [https://guarded-fortress-95261.herokuapp.com](https://guarded-fortress-95261.herokuapp.com  "Playdate Friend Finder")
 
 ---
 ## Technologies used
